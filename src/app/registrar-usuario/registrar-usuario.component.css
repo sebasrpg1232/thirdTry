@@ -1,0 +1,113 @@
+body {
+  background-color: #dae3f3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.text {
+  margin-top: 70px;
+  position: relative;
+  left: 350px;
+}
+.text2 {
+  position: relative;
+  margin-top: 60px;
+  left: 350px;
+}
+.controls {
+  position: relative;
+  left: 450px;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 60px;
+  background-color: gainsboro;
+}
+.other-box {
+  position: relative;
+  top: 480px;
+  left: 925px;
+  transform: translate(-50%, -50%);
+  padding: 80px;
+  width: 1250px;
+  height: 750px;
+  background-color: white;
+  border-style: solid;
+  border-width: 3px 3px;
+  border-color: #c4d6f5;
+}
+.login-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 80px;
+  width: 1200px;
+  height: 700px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px 2px;
+  border-color: #c4d6f5;
+}
+.btn_exit {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  display: block;
+  text-align: center;
+  float: right;
+  margin-top: 0px;
+  background-color: red;
+  color: white;
+  padding: 2px 7px;
+  border-radius: 50%;
+}
+.btn_exit:hover {
+  background-color: crimson;
+  border: 2px solid rgb(127, 206, 255);
+  color: black;
+}
+.btn_minimizar {
+  position: relative;
+  top: 10px;
+  right: 40px;
+  display: block;
+  text-align: center;
+  float: right;
+  margin-top: 0px;
+  background-color: gray;
+  color: white;
+  padding: 2px 7px;
+  border-radius: 50%;
+}
+.btn_minimizar:hover {
+  background-color: grey;
+  border: 2px solid rgb(127, 206, 255);
+  color: black;
+}
+.submit {
+  position: relative;
+  text-align: center;
+  float: right;
+  background-color: #dae3f3;
+  border-color: #c4d6f5;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 3px;
+  right: 150px;
+  bottom: 70px;
+  font-size: 25px;
+}
+.imagen {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 90px;
+}
+.Registrar {
+  position: relative;
+  left: 450px;
+  top: 10px;
+}

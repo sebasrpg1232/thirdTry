@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar contraseña</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+  <body>
+    <div class="text">
+      <img
+        src="../img/WhatsApp_Image_2022-10-07_at_8.18.28_PM-removebg-preview.png"
+        alt="Logo empresa"
+        id="img1"
+      />
+      <h1>INICIO SESIÓN</h1>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="text2">
+      <form>
+        <label for="Texto"> Documento o correo electrónico <br /> </label>
+        <input
+          type="text"
+          placeholder="Ingresar documento o correo electrónico"
+          id="Texto"
+          maxlength="60"
+        />
+      </form>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="text2">
+      <form>
+        <label for="Texto"> Contraseña <br /> </label>
+        <input
+          type="text"
+          placeholder="Ingresar contraseña"
+          id="Texto"
+          maxlength="60"
+        />
+      </form>
+    </div>
+
+    <br />
+
+    <div class="text3">
+      <form>
+        <a for="Texto" routerLink="recuperarContraseña" routerLinkActive="active"> Recuperar contraseña </a>
+      </form>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="boton">
+      <form>
+        <button class="enviar" routerLink="perfil" routerLinkActive="active"><span>Iniciar Sesión</span></button>
+      </form>
+    </div>
+  </body>
+</html>

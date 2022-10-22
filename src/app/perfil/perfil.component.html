@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="dataChech.js"></script>
+  </head>
+
+  <body>
+    <div id="upDiv">
+      <img
+        src="../img/WhatsApp_Image_2022-10-07_at_8.18.28_PM-removebg-preview.png"
+        alt=""
+        id="img1"
+      />
+      <h2 id="perfil">PERFIL</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Revisar nomina</a></li>
+          <li><a href="#">Ver rutas</a></li>
+          <li><a href="#">Justificaciones</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="bigDiv">
+      <div id="datos">
+        <label for="documento">Documento</label>
+        <div id="documento"></div>
+        <br />
+        <label for="nombre">Nombre</label>
+        <div id="nombre"></div>
+        <br />
+        <label for="correo">Correo Electronico</label>
+        <div id="correo"></div>
+        <br />
+        <label for="direccion">direccion</label>
+        <div id="direccion"></div>
+        <br />
+        <label for="telefono">telefono</label>
+        <div id="telefono"></div>
+        <br />
+      </div>
+    </div>
+    <input type="button" value="Dale click" onclick="daleVai()" />
+
+    <script>
+      var nombre = "Carlos Enrique Guillent Carruyo";
+      var documento = "757878";
+      var correo = "carlosguillent@algo.com";
+      var direccion = "Maracaibo-Haticos, Calle 1000b #35y-44 ";
+      var telefono = "3224599592";
+      function daleVai() {
+        document.getElementById("documento").innerHTML = documento;
+        document.getElementById("nombre").innerHTML = nombre;
+        document.getElementById("correo").innerHTML = correo;
+        document.getElementById("direccion").innerHTML = direccion;
+        document.getElementById("telefono").innerHTML = telefono;
+      }
+    </script>
+  </body>
+</html>
