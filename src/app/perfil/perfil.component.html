@@ -26,38 +26,27 @@
     </div>
     <div id="bigDiv">
       <div id="datos">
-        <label for="documento">Documento</label>
+        <label >{{documento}}</label>
         <div id="documento"></div>
         <br />
-        <label for="nombre">Nombre</label>
+        <label >{{nombre}}</label>
         <div id="nombre"></div>
         <br />
-        <label for="correo">Correo Electronico</label>
+        <label for="correo">{{correo}}</label>
         <div id="correo"></div>
         <br />
-        <label for="direccion">direccion</label>
+        <label >{{direccion}}</label>
         <div id="direccion"></div>
         <br />
-        <label for="telefono">telefono</label>
+        <label >{{telefono}}</label>
         <div id="telefono"></div>
         <br />
       </div>
     </div>
-    <input type="button" value="Dale click" onclick="daleVai()" />
+    <input type="button" value="Dale click" (click)="sendValues()" />
 
     <script>
-      var nombre = "Carlos Enrique Guillent Carruyo";
-      var documento = "757878";
-      var correo = "carlosguillent@algo.com";
-      var direccion = "Maracaibo-Haticos, Calle 1000b #35y-44 ";
-      var telefono = "3224599592";
-      function daleVai() {
-        document.getElementById("documento").innerHTML = documento;
-        document.getElementById("nombre").innerHTML = nombre;
-        document.getElementById("correo").innerHTML = correo;
-        document.getElementById("direccion").innerHTML = direccion;
-        document.getElementById("telefono").innerHTML = telefono;
-      }
+      
     </script>
   </body>
 </html>
