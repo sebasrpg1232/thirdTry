@@ -9,7 +9,6 @@
   </head>
 
   <body>
-    <h1>odio existir</h1>
     <div class="text">
       <img
         src="https://i.postimg.cc/15W77ssf/Imagen3.jpg"
@@ -53,7 +52,18 @@
 
     <div class="text3">
       <form>
-        <button class="enviar" (click)="goToChangePassword()"> Recuperar contraseña </button>
+        <button class="enviar" (click)="goToChangeRegister()">
+          Registrar Usuario
+        </button>
+      </form>
+    </div>
+    <br>
+
+    <div class="text3">
+      <form>
+        <button class="enviar" (click)="goToChangePassword()">
+          Recuperar contraseña
+        </button>
       </form>
     </div>
 
@@ -62,7 +72,9 @@
 
     <div class="boton">
       <form>
-        <button class="enviar" (click)="goToProfile()"><span>Iniciar Sesión</span></button>
+        <button class="enviar" (click)="goToProfile()">
+          <span>Iniciar Sesión</span>
+        </button>
       </form>
     </div>
   </body>

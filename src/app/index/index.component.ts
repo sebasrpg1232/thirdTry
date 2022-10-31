@@ -17,6 +17,9 @@ export class IndexComponent implements OnInit {
   goToChangePassword(){
     this.router.navigate(['recuperarContraseña']);
   }
+  goToChangeRegister(){
+    this.router.navigate(['']);
+  }
 
   ngOnInit(): void {
   }

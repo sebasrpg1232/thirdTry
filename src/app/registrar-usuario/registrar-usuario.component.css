@@ -3,6 +3,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .text {
   margin-top: 70px;
