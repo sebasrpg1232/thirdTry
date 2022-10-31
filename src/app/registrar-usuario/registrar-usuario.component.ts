@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrar-usuario.component.css'],
 })
 export class RegistrarUsuarioComponent implements OnInit {
-  constructor() {}
+  constructor(private router:Router) {}
+
+  goToIndex(){
+    this.router.navigate(['index']);
+  }
 
   ngOnInit(): void {}
 }

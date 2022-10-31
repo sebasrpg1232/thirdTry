@@ -53,7 +53,7 @@
 
     <div class="text3">
       <form>
-        <a for="Texto" routerLink="recuperarContraseña" routerLinkActive="active"> Recuperar contraseña </a>
+        <button class="enviar" (click)="goToChangePassword()"> Recuperar contraseña </button>
       </form>
     </div>
 
@@ -62,7 +62,7 @@
 
     <div class="boton">
       <form>
-        <button class="enviar" routerLink="perfil" routerLinkActive="active"><span>Iniciar Sesión</span></button>
+        <button class="enviar" (click)="goToProfile()"><span>Iniciar Sesión</span></button>
       </form>
     </div>
   </body>

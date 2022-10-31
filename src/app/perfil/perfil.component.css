@@ -18,12 +18,14 @@ body > #datos {
   width: auto;
   display: inline-flex;
   margin-bottom: 100px;
+  
 }
 
 #datos > label,
 #documento {
   margin-right: 100px;
   display: inline-flex;
+  
 }
 #nombre {
   margin-right: 65px;
