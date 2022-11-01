@@ -10,7 +10,7 @@ export class RegistrarUsuarioComponent implements OnInit {
   constructor(private router:Router) {}
 
   goToIndex(){
-    this.router.navigate(['index']);
+    this.router.navigate(['']);
   }
 
   ngOnInit(): void {}

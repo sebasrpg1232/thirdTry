@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
   constructor(private router:Router) { }
 
   goToIndex(){
-    this.router.navigate(['index']);
+    this.router.navigate(['']);
   }
   
 

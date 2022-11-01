@@ -15,7 +15,7 @@ export class RecuperarContrasenaComponent implements OnInit {
   }
 
   goToIndex(){
-    this.router.navigate(['index']);
+    this.router.navigate(['']);
   }
 
   public send(form: NgForm): void {

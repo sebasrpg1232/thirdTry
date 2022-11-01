@@ -6,10 +6,10 @@ import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-c
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 
 const routes: Routes = [
-  { path: 'index', component: IndexComponent },  
+  { path: '', component: IndexComponent },  
   { path: 'perfil', component: PerfilComponent },
   { path: 'recuperarContraseña', component: RecuperarContrasenaComponent },
-  { path: '', component: RegistrarUsuarioComponent }
+  { path: 'registrar', component: RegistrarUsuarioComponent }
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+//pendiente de esto
 
 @Component({
   selector: 'app-index',
@@ -10,15 +11,19 @@ export class IndexComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  goToProfile(){
+  guardarDatos() {
+    let sebas = (<HTMLInputElement>document.getElementById("documento")).value;
+    console.log(sebas);
+  }
+  goToProfile() {
     this.router.navigate(['perfil']);
   }
 
-  goToChangePassword(){
+  goToChangePassword() {
     this.router.navigate(['recuperarContraseña']);
   }
-  goToChangeRegister(){
-    this.router.navigate(['']);
+  goToChangeRegister() {
+    this.router.navigate(['register']);
   }
 
   ngOnInit(): void {

@@ -1,81 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recuperar contraseña</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
 
-  <body>
-    <div class="text">
-      <img
-        src="https://i.postimg.cc/15W77ssf/Imagen3.jpg"
-        alt="Logo empresa"
-        id="img1"
-      />
-      <h1>INICIO SESIÓN</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div id="formulario">
+      <h1>Inicio sesion</h1>
+      <label for="documento">Documento</label>
+      <input type="text" id="documento">
+      <br>
+      <label for="contrasena">Contraseña</label>
+      <input type="text" id="contrasena">
+      <a (click)="goToChangeRegister">Registrarse</a>
+      <input type="button" (click)="guardarDatos()" value="dale click">
     </div>
+</body>
 
-    <br />
-    <br />
-
-    <div class="text2">
-      <form>
-        <label for="Texto"> Documento o correo electrónico <br /> </label>
-        <input
-          type="text"
-          placeholder="Ingresar documento o correo electrónico"
-          id="Texto"
-          maxlength="60"
-        />
-      </form>
-    </div>
-
-    <br />
-    <br />
-
-    <div class="text2">
-      <form>
-        <label for="Texto"> Contraseña <br /> </label>
-        <input
-          type="text"
-          placeholder="Ingresar contraseña"
-          id="Texto"
-          maxlength="60"
-        />
-      </form>
-    </div>
-
-    <br />
-
-    <div class="text3">
-      <form>
-        <button class="enviar" (click)="goToChangeRegister()">
-          Registrar Usuario
-        </button>
-      </form>
-    </div>
-    <br>
-
-    <div class="text3">
-      <form>
-        <button class="enviar" (click)="goToChangePassword()">
-          Recuperar contraseña
-        </button>
-      </form>
-    </div>
-
-    <br />
-    <br />
-
-    <div class="boton">
-      <form>
-        <button class="enviar" (click)="goToProfile()">
-          <span>Iniciar Sesión</span>
-        </button>
-      </form>
-    </div>
-  </body>
 </html>
