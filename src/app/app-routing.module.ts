@@ -8,7 +8,7 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
 const routes: Routes = [
   { path: '', component: IndexComponent },  
   { path: 'perfil', component: PerfilComponent },
-  { path: 'recuperarContraseña', component: RecuperarContrasenaComponent },
+  { path: 'recuperarContrasena', component: RecuperarContrasenaComponent },
   { path: 'registrar', component: RegistrarUsuarioComponent }
 ];
 

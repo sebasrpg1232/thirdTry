@@ -7,50 +7,28 @@
     <title>Registrar</title>
   </head>
   <body>
-        <div>
-          <img
-            class="imagen"
-            src="https://i.postimg.cc/15W77ssf/Imagen3.jpg"
-            alt=""
-          />
-          <div class="Registrar">
-            <H1 style="font-size: 60px">R E G I S T R O </H1>
-          </div>
-          <form class="form">
-            <pre></pre>
-            <label class="text">Documento:</label>
-            <input class="controls" type="text" placeholder="ingresar documento" />
-            <pre></pre>
-            <label class="text">Nombre:</label>
-            <input class="controls" type="text" placeholder="Ingresar nombre" />
-            <pre></pre>
-            <label class="text2">Correo Electronico:</label>
-            <input
-              class="controls"
-              type="email"
-              placeholder="Ingresar correo electronico"
-            />
-            <pre></pre>
-            <label class="text">Dirección:</label>
-            <input
-              class="controls"
-              type="text"
-              placeholder="Ingresar su dirección"
-            />
-            <pre></pre>
-            <label class="text">Numero:</label>
-            <input
-              class="controls"
-              type="tel"
-              placeholder="Ingresar su numero telefonico"
-            />
-            <pre></pre>
-            
-            <button type="button" (click)="goToIndex()">Registrar</button>
-          </form>
-        </div>
-    
-
-    
-      </body>
+    <div id="formulario">
+      <img src="https://i.postimg.cc/15W77ssf/Imagen3.jpg" alt="" id="logo" />
+      <h1 id="registrar">Registro</h1>
+      <br />
+      <label for="documento">Documento</label>
+      <input type="text" id="documento" />
+      <br />
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" />
+      <br />
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" />
+      <br />
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" />
+      <br />
+      <label for="numero">Número</label>
+      <input type="text" id="numero" />
+      <br />
+      <input type="button" value="click on here" />
+      <br />
+      <br />
+    </div>
+  </body>
 </html>

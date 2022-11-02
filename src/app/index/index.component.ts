@@ -12,8 +12,10 @@ export class IndexComponent implements OnInit {
   constructor(private router: Router) { }
 
   guardarDatos() {
-    let sebas = (<HTMLInputElement>document.getElementById("documento")).value;
-    console.log(sebas);
+    let documento = (<HTMLInputElement>document.getElementById("documento")).value;
+    let contrasena = (<HTMLInputElement>document.getElementById("contrasena")).value;
+    console.log(documento);
+    console.log(contrasena);
   }
   goToProfile() {
     this.router.navigate(['perfil']);
