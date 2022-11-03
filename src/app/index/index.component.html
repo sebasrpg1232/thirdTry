@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trabajo</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
 
-  <body>
-    <div id="formulario">
-      <img src="https://i.postimg.cc/15W77ssf/Imagen3.jpg" alt="" id="logo" />
-      <h1 id="inicio">Inicio sesion</h1>
-      <label for="documento">Documento</label>
-      <input type="text" id="documento" />
-      <br />
-      <label for="contrasena">Contraseña</label>
-      <input type="password" id="contrasena" />
-      <br />
-      <input type="button" (click)="guardarDatos()" value="dale click" />
-      <br />
-      <a href="http://localhost:4200/registrar">Registrarse</a>
-      <br />
-      <br />
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+  <div id="formulario">
+    <img src="https://i.postimg.cc/15W77ssf/Imagen3.jpg" alt="" id="logo" />
+    <h1 id="inicio">Inicio sesion</h1>
+    <label for="documento">Documento</label>
+    <input type="text" id="documento" />
+    <br />
+    <label for="contrasena">Contraseña</label>
+    <input type="password" id="contrasena" />
+    <br />
+    <input type="button" (click)="goToProfile()" value="Iniciar sesion" />
+    <br />
+    <a href="http://localhost:4200/registrar">Registrarse</a>
+    <br />
+    <br />
+  </div>
+</body>
+
 </html>

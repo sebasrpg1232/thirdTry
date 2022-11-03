@@ -1,4 +1,4 @@
-import { Component, OnInit,AfterViewInit, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { DriverServiceService } from '../data/driver-service.service';
 import { iDriver } from '../data/iDriver';
@@ -22,14 +22,20 @@ export class IndexComponent implements OnInit {
 
   constructor(private router: Router,
     private driverService: DriverServiceService,
-    ) { }
+  ) { }
 
   guardarDatos() {
-    let documento = (<HTMLInputElement>document.getElementById("documento")).value;
-    let contrasena = (<HTMLInputElement>document.getElementById("contrasena")).value;
-    console.log(documento);
-    console.log(contrasena);
+    //let documento = (<HTMLInputElement>document.getElementById("documento")).value;
+    // aqui iria los datos que se comparan en la bddlet contrasena = (<HTMLInputElement>document.getElementById("contrasena")).value;
+
   }
+
+  validarDatos(documento = (<HTMLInputElement>document.getElementById("documento")).value,
+    contraseña = (<HTMLInputElement>document.getElementById("contrasena")).value) {
+      
+  }
+
+
   goToProfile() {
     this.router.navigate(['perfil']);
   }
@@ -45,11 +51,11 @@ export class IndexComponent implements OnInit {
     console.log('Buscando el drivers ');
     this.driverService.GetDriver().then((response: any) => {
       console.log('response', response);
-      this.drivers = response;      
+      this.drivers = response;
     })
-    .catch((error: any) => {
-      console.error(': ', error);
-    })     
+      .catch((error: any) => {
+        console.error(': ', error);
+      })
   }
 
 }

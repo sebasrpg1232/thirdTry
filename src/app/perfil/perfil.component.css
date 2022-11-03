@@ -1,13 +1,13 @@
 body {
   text-align: center;
-  font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h2 {
   font-size: 40px;
 }
 
-body > #datos {
+body>#datos {
   position: relative;
   text-align: left;
   margin: auto;
@@ -19,49 +19,42 @@ body > #datos {
   width: auto;
   display: inline-flex;
   margin-bottom: 100px;
-  
+
 }
 
-#datos > label,
+#datos>label,
 #documento {
   margin-right: 100px;
   display: inline-flex;
-  
+
 }
+
 #nombre {
   margin-right: 65px;
   display: inline-flex;
 }
+
 #correo {
   margin-right: 200px;
   display: inline-flex;
 }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-}
-nav {
-  position: relative;
-  margin-left: 100px;
-}
+
+
 #direccion {
   margin-right: 80px;
   display: inline-flex;
 }
+
 #telefono {
   margin-right: 80px;
   display: inline-flex;
 }
-#datos > label {
+
+#datos>label {
   font-size: 30px;
   margin-bottom: 40px;
 }
+
 #documento,
 #nombre,
 #correo,
@@ -69,7 +62,7 @@ nav {
 #telefono {
   width: 500px;
   height: 30px;
-  background: gainsboro;
+  background: white;
   border-radius: 3%;
 }
 
@@ -77,4 +70,13 @@ nav {
   margin-left: -100px;
   margin-right: 100px;
   width: 110px;
+  border-radius: 50%;
+}
+
+#divMain {
+  background: #dae3f3;
+  border-radius: 2%;
+}
+@media (max-width: 800px){
+  
 }

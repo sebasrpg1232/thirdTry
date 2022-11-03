@@ -33,3 +33,36 @@ body {
 #formulario > input {
   margin: 20px;
 }
+@media (min-width: 920px){
+  #logo {
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 50px;
+  }
+  #inicio {
+    display: flex;
+    position: relative;
+    margin-left: 150px;
+    margin-top: -40px;
+  }
+  #formulario {
+    width: 700px;
+    height: auto;
+    background: #dae3f3;
+    border-radius: 4%;
+    margin: 100px;
+    padding: auto;
+    display: inline-block;
+  }
+  #contrasena,#documento {
+    border-radius: 2%;
+    background: gainsboro;
+    height: 30px;
+    width: 350px;
+  }
+  #formulario > input {
+    margin: 40px;
+  }
+}
