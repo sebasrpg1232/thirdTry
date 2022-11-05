@@ -10,25 +10,32 @@ import { iDriver } from '../data/iDriver';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  drivers!: any[];
-
-  driver: iDriver = {
+  drivers: iDriver[] = [];
+  conductor!: iDriver;
+  /* iDriver: iDriver = {
     driverName: '',
     driverId: 0,
     driverDirection: '',
     driverNumber: 0,
-    driverEmail: ''
-  };
+    driverEmail: '',
+    driverPassword: ''
+  }; */
 
   constructor(private router: Router,
     private driverService: DriverServiceService,
-  ) { }
+  ) {
+
+
+
+   }
 
   guardarDatos() {
     //let documento = (<HTMLInputElement>document.getElementById("documento")).value;
     // aqui iria los datos que se comparan en la bddlet contrasena = (<HTMLInputElement>document.getElementById("contrasena")).value;
 
   }
+
+  
 
   validarDatos(documento = (<HTMLInputElement>document.getElementById("documento")).value,
     contraseña = (<HTMLInputElement>document.getElementById("contrasena")).value) {
@@ -49,13 +56,26 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Buscando el drivers ');
-    this.driverService.GetDriver().then((response: any) => {
+/*     this.driverService.GetDriver().subscribe(response => {
       console.log('response', response);
-      this.drivers = response;
+      this.drivers = response.data;
+    }) */
+
+    this.driverService.GetDriver().subscribe({
+next: drivers =>{
+  let dato: string = JSON.stringify(drivers).replace('[', '').replace(']','');
+  let json = JSON.parse(dato);
+  console.log(json);
+  this.conductor = json;
+  console.log(this.conductor.driverDirection);
+  this.drivers = drivers;
+  console.log(JSON.stringify(drivers).replace('[', '').replace(']',''));
+}
     })
-      .catch((error: any) => {
-        console.error(': ', error);
-      })
+
+    console.log(this.drivers);
+    
+
   }
 
 }

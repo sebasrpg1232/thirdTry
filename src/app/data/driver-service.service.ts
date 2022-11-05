@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { catchError, tap, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { iDriver } from '../data/iDriver'
 
@@ -9,8 +10,10 @@ import { iDriver } from '../data/iDriver'
 export class DriverServiceService {
 
   constructor(private https: HttpClient) { }
-  GetDriver(): Promise<any> { 
-    return this.https.get<any>('https://localhost:7136/api/Drivers')
-    .toPromise();
+  public GetDriver(): Observable<iDriver []> { 
+    return this.https.get<iDriver []>('https://localhost:7136/api/Drivers').pipe(
+      tap(data =>
+      console.log('All: ' + JSON.stringify(data)))
+    );;
   }
 }
