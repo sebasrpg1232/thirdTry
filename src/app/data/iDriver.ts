@@ -3,5 +3,6 @@ export interface iDriver {
     driverId: number,
     driverDirection: string,
     driverNumber: number,
-    driverEmail: string
+    driverEmail: string,
+    driverPassword: string
 }
