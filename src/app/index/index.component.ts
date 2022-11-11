@@ -51,7 +51,7 @@ export class IndexComponent implements OnInit {
     this.router.navigate(['recuperarContraseña']);
   }
   goToChangeRegister() {
-    this.router.navigate(['register']);
+    this.router.navigate(['registrar']);
   }
 
   ngOnInit(): void {

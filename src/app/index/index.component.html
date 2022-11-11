@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabajo</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trabajo</title>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
+  <body>
+    <div id="main">
+      <div id="capa1">
+        <img
+          src="https://i.postimg.cc/15W77ssf/Imagen3.jpg"
+          alt="Logo empresa"
+          id="logo"
+        />
+        <h1 id="h1">Inicio sesion</h1>
+        <label for="documento">Documento</label
+        ><input id="documento" type="text" />
+        <br />
 
-<body>
-  <div id="formulario">
-    <img src="https://i.postimg.cc/15W77ssf/Imagen3.jpg" alt="" id="logo" />
-    <h1 id="inicio">Inicio sesion</h1>
-    <label for="documento">Documento</label>
-    <input type="text" id="documento" />
-    <br />
-    <label for="contrasena">Contraseña</label>
-    <input type="password" id="contrasena" />
-    <br />
-    <input type="button" (click)="goToProfile()" value="Iniciar sesion" />
-    <br />
-    <a href="http://localhost:4200/registrar">Registrarse</a>
-    <br />
-    <br />
-  </div>
-</body>
-
+        <label for="contrasena">Contraseña</label
+        ><input id="contrasena" type="text" />
+        <br />
+        <br />
+        <input
+          id="boton"
+          type="button"
+          value="ingresar"
+          (click)="goToProfile()"
+        />
+      </div>
+      <div id="capa2">
+        <div id="capa3">
+          <h2>
+            Aún no estás registrado?
+            <br />
+            <br />
+            <input
+              id="boton"
+              type="button"
+              value="Registrar"
+              (click)="goToChangeRegister()"
+            />
+          </h2>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
