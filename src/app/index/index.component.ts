@@ -53,7 +53,9 @@ export class IndexComponent implements OnInit {
   goToChangeRegister() {
     this.router.navigate(['registrar']);
   }
-
+goToPermisionRegister(){
+  this.router.navigate(['permisoRegistrar']);
+}
   ngOnInit(): void {
     console.log('Buscando el drivers ');
 /*     this.driverService.GetDriver().subscribe(response => {

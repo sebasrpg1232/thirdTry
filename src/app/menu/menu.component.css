@@ -11,7 +11,7 @@
 nav {
     position: fixed;
     display: unset block;
-    height: 80px;
+    height: 70px;
     width: 100%;
 }
 
@@ -19,11 +19,6 @@ nav {
     position: absolute;
     padding: 20px 50px;
 }
-
-.logo {
-    height: 40px;
-}
-
 nav ul {
     float: right;
     margin-right: 20px;
@@ -86,7 +81,7 @@ li a:hover {
 
     ul {
         position: fixed;
-        width: 100%;
+        width: 70%;
         height: 100vh;
         background: #2c3e50;
         top: 80px;

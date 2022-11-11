@@ -8,12 +8,12 @@ import { Route, Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
-  goToIndex(){
+  goToIndex() {
     this.router.navigate(['']);
   }
-  
+
 
   ngOnInit(): void {
   }

@@ -14,6 +14,7 @@ import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-c
 import { MenuComponent } from './menu/menu.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PermisoRegistroComponent } from './permiso-registro/permiso-registro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     IndexComponent,
     PerfilComponent,
     RecuperarContrasenaComponent,
-    MenuComponent
+    MenuComponent,
+    PermisoRegistroComponent
   ],
   imports: [
     BrowserModule,
