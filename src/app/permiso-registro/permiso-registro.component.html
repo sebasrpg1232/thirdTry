@@ -14,10 +14,14 @@
             <h1 id="titulo">Registrar conductor</h1>
             <label for="documento">Documento</label><input type="text" placeholder="Ingrese su documento"
                 id="documento">
-                <div class="g-recaptcha" data-sitekey="6Lcndf0iAAAAAGr0RUpNDyk-xL9O71thRpaGFksy"></div>
+            <div class="g-recaptcha" data-sitekey="6Lcndf0iAAAAAGr0RUpNDyk-xL9O71thRpaGFksy"></div>
             <input type="button" value="Enviar" id="boton" (click)="goToRegister()">
+            <div [hidden]="captcha">
+                <re-captcha (resolved)="resolved($event)" siteKey="6Lcndf0iAAAAAGr0RUpNDyk-xL9O71thRpaGFksy">
+                </re-captcha>
+            </div>
         </div>
-
+        <div [hidden]="!captcha"></div>
     </div>
 
 </body>

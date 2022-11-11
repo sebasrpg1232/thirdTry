@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PermisoRegistroComponent } from './permiso-registro/permiso-registro.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -31,12 +32,13 @@ import { PermisoRegistroComponent } from './permiso-registro/permiso-registro.co
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RecaptchaV3Module
+    RecaptchaV3Module,
+    RecaptchaModule
   ],
   providers: [
     {
       provide: RECAPTCHA_V3_SITE_KEY,
-    useValue: environment.recaptcha.siteKey 
+      useValue: environment.recaptcha.siteKey
     }
   ],
   bootstrap: [AppComponent]

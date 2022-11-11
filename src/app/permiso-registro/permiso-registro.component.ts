@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./permiso-registro.component.css']
 })
 export class PermisoRegistroComponent implements OnInit {
+  captcha!: string;
+  email!: string;
   algo = "Ingresar documento o correo electrónico";
   goToRegister() {
     this.router.navigate(['registrar']);
@@ -14,13 +16,19 @@ export class PermisoRegistroComponent implements OnInit {
     let desition = (<HTMLInputElement>document.getElementById("documento")).value;
     if (desition == "Ingresar documento o correo electrónico") {
       this.algo = "debe registrar algo";
-    }else{
+    } else {
       this.algo = "";
     }
   }
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.captcha = "";
+    this.email = "secretemail@gmail.com";
+  }
 
   ngOnInit(): void {
   }
-
+resolved(captchaResponse: string){
+  this.captcha = captchaResponse;
+  console.log("resolve captcha with response: " + this.captcha);
+}
 }
