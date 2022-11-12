@@ -12,6 +12,7 @@ import { iDriver } from '../data/iDriver';
 export class IndexComponent implements OnInit {
   drivers: iDriver[] = [];
   conductor!: iDriver;
+  dri: any;
   /* iDriver: iDriver = {
     driverName: '',
     driverId: 0,
@@ -44,7 +45,22 @@ export class IndexComponent implements OnInit {
 
 
   goToProfile() {
-    this.router.navigate(['perfil']);
+    let documento:number = parseInt((<HTMLInputElement>document.getElementById("documento")).value);
+    let contraseña = (<HTMLInputElement>document.getElementById("contrasena")).value;
+    this.driverService.GetOneDriver(documento).subscribe({
+      next: driver =>{
+/*         let dato: string = JSON.stringify(driver).replace('[', '').replace(']','');
+        let json = JSON.parse(dato);
+        this.conductor = json;
+        console.log(json); */
+        this.dri = driver;
+      }
+          });
+          let dato: string = JSON.stringify(this.dri).replace('[', '').replace(']','');
+          let json = JSON.parse(dato);
+          this.conductor = json;
+          console.log(json); 
+    //this.router.navigate(['perfil']);
   }
 
   goToChangePassword() {
@@ -63,7 +79,7 @@ goToPermisionRegister(){
       this.drivers = response.data;
     }) */
 
-    this.driverService.GetDriver().subscribe({
+    this.driverService.GetDrivers().subscribe({
 next: drivers =>{
   let dato: string = JSON.stringify(drivers).replace('[', '').replace(']','');
   let json = JSON.parse(dato);
