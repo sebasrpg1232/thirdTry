@@ -8,23 +8,18 @@ import { MoveDataService } from '../data/move-data.service';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  constructor(private data: MoveDataService) { }
+  constructor(private data: MoveDataService) {}
   driver!: iDriver;
-  nombre = "";
-  documento = "";
-  correo = "";
-  direccion = "";
-  telefono = "";
+  nombre = '';
+  documento = '';
+  correo = '';
+  direccion = '';
+  telefono = '';
 
-  sendValues() {
-    this.nombre = "Carlos Enrique Guillent Carruyo";
-    this.documento = "757878";
-    this.correo = "carlosguillent@algo.com";
-    this.direccion = "Maracaibo-Haticos, Calle 1000b #35y-44 ";
-    this.telefono = "3224599592";
-  }
-  ngOnInit(): void { 
-    
-    //console.log(this.data.getDriver());
+  ngOnInit(): void {
+    this.correo = this.data.getDriver().driverEmail;
+    this.nombre = this.data.getDriver().driverName;
+    this.direccion = this.data.getDriver().driverDirection;
+    this.telefono = this.data.getDriver().driverNumber.toString();
   }
 }

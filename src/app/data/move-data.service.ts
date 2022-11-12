@@ -6,12 +6,12 @@ import { iDriver } from './iDriver';
 })
 export class MoveDataService {
 private driver:iDriver = {
-  driverName: '',
-    driverId: 0,
-    driverDirection: '',
-    driverNumber: 0,
-    driverEmail: '',
-    driverPassword: ''
+  driverName: 'carlos',
+    driverId: 757878,
+    driverDirection: 'ayudaporfa',
+    driverNumber: 3224599592,
+    driverEmail: 'ysi@perdimicarnet.com',
+    driverPassword: '12345543112321'
 };
 
 addDriver(driver: iDriver){
