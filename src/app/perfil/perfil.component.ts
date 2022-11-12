@@ -25,6 +25,6 @@ export class PerfilComponent implements OnInit {
   }
   ngOnInit(): void { 
     
-    console.log(this.data.getDriver());
+    //console.log(this.data.getDriver());
   }
 }

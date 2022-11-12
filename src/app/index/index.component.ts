@@ -52,7 +52,7 @@ export class IndexComponent implements OnInit {
         }
       });
       if(sw){
-        console.log(this.validDriver);
+        //console.log(this.validDriver);
         /* this.router.navigate(['perfil'],{queryParams: {try: this.validDriver.driverId}}); */
         this.data.addDriver(this.validDriver);
         this.router.navigate(['perfil']);
