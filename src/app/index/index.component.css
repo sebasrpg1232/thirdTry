@@ -38,7 +38,7 @@ body {
   position: relative;
   margin-top: 200px;
 }
-#documento,
+#correo,
 #contrasena {
   width: 30%;
   margin: 30px;
@@ -46,6 +46,9 @@ body {
   border: none;
   border-radius: 50px;
   background: #dae3f3;
+}
+#correo{
+  margin-left: 70px;
 }
 #boton {
   background: -webkit-linear-gradient(top, #dae3f3, #2079b0);
@@ -93,7 +96,7 @@ body {
     margin-bottom: -15px;
     margin: 20px;
   }
-  #documento,
+  #correo,
   #contrasena {
     width: 30%;
     height: 5px;
@@ -102,5 +105,8 @@ body {
     border: none;
     border-radius: 50px;
     background: #dae3f3;
+  }
+  #correo{
+    margin-left: 60px;
   }
 }

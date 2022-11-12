@@ -23,7 +23,8 @@ body {
 #nombre,
 #correo,
 #direccion,
-#numero {
+#numero,
+#contraseña {
   width: 30%;
   margin: 30px;
   padding: 10px;
@@ -31,12 +32,8 @@ body {
   border-radius: 50px;
   background: #dae3f3;
 }
-label{
+label {
   font-size: 20px;
-}
-
-#documento {
-  margin-left: 30px;
 }
 
 #nombre {
@@ -56,7 +53,11 @@ label{
 }
 
 #boton {
-  background: linear-gradient(90deg, hsla(289, 70%, 83%, 1) 0%, hsla(229, 89%, 62%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(289, 70%, 83%, 1) 0%,
+    hsla(229, 89%, 62%, 1) 100%
+  );
   border: 2px;
   border-color: #d5d5d5;
   color: #000000;
