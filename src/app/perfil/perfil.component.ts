@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { iDriver } from '../data/iDriver';
 
 @Component({
   selector: 'app-perfil',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
   constructor() { }
-
+@Input() driver!: iDriver;
   nombre = "";
   documento = "";
   correo = "";
@@ -21,5 +22,7 @@ export class PerfilComponent implements OnInit {
     this.direccion = "Maracaibo-Haticos, Calle 1000b #35y-44 ";
     this.telefono = "3224599592";
   }
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    console.log(this.driver);
+  }
 }

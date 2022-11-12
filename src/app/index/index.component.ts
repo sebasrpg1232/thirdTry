@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DriverServiceService } from '../data/driver-service.service';
 import { iDriver } from '../data/iDriver';
@@ -11,6 +11,7 @@ import { iDriver } from '../data/iDriver';
 })
 export class IndexComponent implements OnInit {
   drivers: iDriver[] = [];
+  @Output() validDriver!: iDriver;
   /* iDriver: iDriver = {
     driverName: '',
     driverId: 0,
@@ -36,9 +37,21 @@ export class IndexComponent implements OnInit {
 
   
 
-  validarDatos(documento = (<HTMLInputElement>document.getElementById("documento")).value,
-    contraseña = (<HTMLInputElement>document.getElementById("contrasena")).value) {
-      
+  validarDatos() {
+      /* var validDriver: iDriver; */
+     var correo = (<HTMLInputElement>document.getElementById("correo")).value;
+     var contraseña = (<HTMLInputElement>document.getElementById("contrasena")).value;
+      var sw: boolean = false; 
+      this.drivers.forEach(driver => {
+        if(driver.driverEmail == correo && driver.driverPassword == contraseña){
+          this.validDriver = driver;
+          sw = true;
+        }
+      });
+      if(sw){
+        console.log(this.validDriver);
+        this.router.navigate(['perfil']);
+      }
   }
 
 
