@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { iDriver } from '../data/iDriver';
+import { MoveDataService } from '../data/move-data.service';
 
 @Component({
   selector: 'app-perfil',
@@ -7,8 +8,8 @@ import { iDriver } from '../data/iDriver';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  constructor() { }
-@Input() driver!: iDriver;
+  constructor(private data: MoveDataService) { }
+  driver!: iDriver;
   nombre = "";
   documento = "";
   correo = "";
@@ -23,6 +24,7 @@ export class PerfilComponent implements OnInit {
     this.telefono = "3224599592";
   }
   ngOnInit(): void { 
-    console.log(this.driver);
+    
+    console.log(this.data.getDriver());
   }
 }

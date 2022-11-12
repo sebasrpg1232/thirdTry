@@ -1,7 +1,9 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit, AfterViewInit, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DriverServiceService } from '../data/driver-service.service';
 import { iDriver } from '../data/iDriver';
+import { MoveDataService } from '../data/move-data.service';
 //pendiente de esto
 
 @Component({
@@ -11,7 +13,7 @@ import { iDriver } from '../data/iDriver';
 })
 export class IndexComponent implements OnInit {
   drivers: iDriver[] = [];
-  @Output() validDriver!: iDriver;
+  validDriver!: iDriver;
   /* iDriver: iDriver = {
     driverName: '',
     driverId: 0,
@@ -22,7 +24,8 @@ export class IndexComponent implements OnInit {
   }; */
 
   constructor(private router: Router,
-    private driverService: DriverServiceService
+    private driverService: DriverServiceService,
+    private data: MoveDataService
   ) {
 
 
@@ -50,6 +53,8 @@ export class IndexComponent implements OnInit {
       });
       if(sw){
         console.log(this.validDriver);
+        /* this.router.navigate(['perfil'],{queryParams: {try: this.validDriver.driverId}}); */
+        this.data.addDriver(this.validDriver);
         this.router.navigate(['perfil']);
       }
   }
