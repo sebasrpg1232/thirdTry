@@ -11,8 +11,6 @@ import { iDriver } from '../data/iDriver';
 })
 export class IndexComponent implements OnInit {
   drivers: iDriver[] = [];
-  conductor!: iDriver;
-  dri: any;
   /* iDriver: iDriver = {
     driverName: '',
     driverId: 0,
@@ -23,7 +21,7 @@ export class IndexComponent implements OnInit {
   }; */
 
   constructor(private router: Router,
-    private driverService: DriverServiceService,
+    private driverService: DriverServiceService
   ) {
 
 
@@ -45,21 +43,21 @@ export class IndexComponent implements OnInit {
 
 
   goToProfile() {
-    let documento:number = parseInt((<HTMLInputElement>document.getElementById("documento")).value);
+   /*  let documento:number = parseInt((<HTMLInputElement>document.getElementById("documento")).value);
     let contraseña = (<HTMLInputElement>document.getElementById("contrasena")).value;
     this.driverService.GetOneDriver(documento).subscribe({
       next: driver =>{
-/*         let dato: string = JSON.stringify(driver).replace('[', '').replace(']','');
+        let dato: string = JSON.stringify(driver).replace('[', '').replace(']','');
         let json = JSON.parse(dato);
         this.conductor = json;
-        console.log(json); */
+        console.log(json); 
         this.dri = driver;
       }
           });
           let dato: string = JSON.stringify(this.dri).replace('[', '').replace(']','');
           let json = JSON.parse(dato);
           this.conductor = json;
-          console.log(json); 
+          console.log(json);  */
     //this.router.navigate(['perfil']);
   }
 
@@ -74,12 +72,26 @@ goToPermisionRegister(){
 }
   ngOnInit(): void {
     console.log('Buscando el drivers ');
+    this.driverService.getAllDrivers().subscribe({
+      next: (iDrivers) =>{
+        this.drivers = iDrivers;
+        console.log(iDrivers);
+      },
+      error: (Response) =>{
+        console.log(Response);
+      }
+    })
+
+
+
+
+
 /*     this.driverService.GetDriver().subscribe(response => {
       console.log('response', response);
       this.drivers = response.data;
     }) */
 
-    this.driverService.GetDrivers().subscribe({
+   /*  this.driverService.GetDrivers().subscribe({
 next: drivers =>{
   let dato: string = JSON.stringify(drivers).replace('[', '').replace(']','');
   let json = JSON.parse(dato);
@@ -89,7 +101,7 @@ next: drivers =>{
   this.drivers = drivers;
   console.log(JSON.stringify(drivers).replace('[', '').replace(']',''));
 }
-    })
+    }) */
 
     console.log(this.drivers);
     

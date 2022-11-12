@@ -10,10 +10,10 @@
     <div id="formulario">
       <img src="https://i.postimg.cc/15W77ssf/Imagen3.jpg" alt="" id="logo" />
       <h1 id="registrar">Registro</h1>
-      <br />
+      <br /><!-- 
       <label for="documento">Documento</label>
       <input type="text" id="documento" />
-      <br />
+      <br /> -->
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" />
       <br />
@@ -26,7 +26,10 @@
       <label for="numero">Número</label>
       <input type="text" id="numero" />
       <br />
-      <input type="button" value="click on here" id="boton" />
+      <label for="contraseña">Contraseña</label>
+      <input type="text" id="contraseña" />
+      <br />
+      <input type="button" value="click on here" (click)="createADriver()" id="boton" />
       <br />
       <br />
     </div>

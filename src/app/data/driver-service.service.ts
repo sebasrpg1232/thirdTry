@@ -3,25 +3,20 @@ import { Observable } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { iDriver } from '../data/iDriver'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DriverServiceService {
+baseApiUrl: string = environment.baseApiUrl;
+  constructor(private http: HttpClient) { }
 
-  constructor(private https: HttpClient) { }
-  public GetDrivers(): Observable<iDriver []> { 
-    return this.https.get<iDriver []>('https://localhost:7136/api/Drivers').pipe(
-      tap(data =>
-      console.log('All: ' + JSON.stringify(data)))
-    );;
+  getAllDrivers(): Observable<iDriver[]>{
+   return this.http.get<iDriver[]>(this.baseApiUrl + 'api/drivers')
   }
 
-  public GetOneDriver(id: number): Observable<iDriver> { 
-    return this.https.get<iDriver>('https://localhost:7136/api/Drivers' + "/" + id).pipe(
-      tap(data =>
-      console.log('All: ' + JSON.stringify(data)))
-    );;
+  postDriver(addDriverRequest: iDriver): Observable<iDriver>{
+    return this.http.post<iDriver>(this.baseApiUrl + 'api/drivers', addDriverRequest);
   }
-
 }
