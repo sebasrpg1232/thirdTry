@@ -51,9 +51,11 @@ export class IndexComponent implements OnInit {
     this.router.navigate(['recuperarContraseña']);
   }
   goToChangeRegister() {
-    this.router.navigate(['register']);
+    this.router.navigate(['registrar']);
   }
-
+goToPermisionRegister(){
+  this.router.navigate(['permisoRegistrar']);
+}
   ngOnInit(): void {
     console.log('Buscando el drivers ');
 /*     this.driverService.GetDriver().subscribe(response => {

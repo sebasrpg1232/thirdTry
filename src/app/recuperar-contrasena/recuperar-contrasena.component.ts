@@ -10,11 +10,14 @@ import { ReCaptchaV3Service } from 'ng-recaptcha';
   styleUrls: ['./recuperar-contrasena.component.css']
 })
 export class RecuperarContrasenaComponent implements OnInit {
-
-  constructor(private recaptchaV3Service: ReCaptchaV3Service, private router:Router) {
+  captcha!: string;
+  email!: string;
+  constructor(private recaptchaV3Service: ReCaptchaV3Service, private router: Router) {
+    this.captcha = "";
+    this.email = "secretemail@gmail.com";
   }
 
-  goToIndex(){
+  goToIndex() {
     this.router.navigate(['']);
   }
 
@@ -27,12 +30,15 @@ export class RecuperarContrasenaComponent implements OnInit {
     }
 
     this.recaptchaV3Service.execute('importantAction')
-    .subscribe((token: string) => {
-      console.debug(`Token [${token}] generated`);
-    });
+      .subscribe((token: string) => {
+        console.debug(`Token [${token}] generated`);
+      });
   }
 
   ngOnInit(): void {
   }
-
+  resolved(captchaResponse: string) {
+    this.captcha = captchaResponse;
+    console.log("resolve captcha with response: " + this.captcha);
+  }
 }

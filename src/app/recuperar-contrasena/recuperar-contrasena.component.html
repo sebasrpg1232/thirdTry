@@ -1,57 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recuperar contraseña</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
 
-  <body>
-    <div class="text">
-      <img
-        src="https://i.postimg.cc/15W77ssf/Imagen3.jpg"
-        alt="Logo empresa"
-        id="img1"
-      />
-      <h1>RECUPERAR CONTRASEÑA</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="divMain">
+    <div id="idk">
+      <img src="https://i.postimg.cc/15W77ssf/Imagen3.jpg" alt="Logo empresa" id="logo" />
+      <h1 id="titulo">Registrar conductor</h1>
+      <label for="documento">Documento</label><input type="text" placeholder="Ingrese su documento" id="documento">
+      <div class="g-recaptcha" data-sitekey="6Lcndf0iAAAAAGr0RUpNDyk-xL9O71thRpaGFksy"></div>
+      <input type="button" value="Enviar" id="boton" (click)="goToIndex()">
+      <div [hidden]="captcha">
+        <re-captcha (resolved)="resolved($event)" siteKey="6Lcndf0iAAAAAGr0RUpNDyk-xL9O71thRpaGFksy">
+        </re-captcha>
+      </div>
     </div>
+    <div [hidden]="!captcha"></div>
+  </div>
 
-    <br />
-    <br />
-    <div class="text2">
-      <form>
-        <label for="Texto"> Documento</label>
-        <input
-          type="text"
-          placeholder="Ingresar documento o correo electrónico"
-          id="Texto"
-          maxlength="60"
-        />
-      </form>
-    </div>
+</body>
 
-    <br />
-    <br />
-
-    <div class="mb-3">
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdFUJQiAAAAAF96slbixmVmEjVaPgu9su7r_GNb"
-      ></div>
-    </div>
-
-    <br />
-    <br />
-
-    <div class="boton">
-      <form>
-        <button class="enviar" (click)="goToIndex()">Recuperar contraseña</button>
-      </form>
-    </div>
-
-    
-   
-  </body>
 </html>

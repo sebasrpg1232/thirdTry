@@ -60,10 +60,12 @@ body>#datos {
 #correo,
 #direccion,
 #telefono {
-  width: 500px;
-  height: 30px;
+  width: 30%;
+  height: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
   background: white;
-  border-radius: 3%;
 }
 
 #img1 {
@@ -74,9 +76,8 @@ body>#datos {
 }
 
 #divMain {
-  background: #dae3f3;
-  border-radius: 2%;
+  background: -webkit-linear-gradient(top, #2079b0,#dae3f3);
+
 }
-@media (max-width: 800px){
-  
-}
+
+@media (max-width: 800px) {}

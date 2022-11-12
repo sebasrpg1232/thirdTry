@@ -1,68 +1,106 @@
 body {
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  text-align: center;
+    
 }
+#main {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+}
+#h1 {
+  position: relative;
+  margin-left: 65px;
+}
+
 #logo {
   position: relative;
-  display: flex;
-  margin-left: 40px;
-  margin-top: 40px;
-  border-radius: 50px;
+  margin-right: 700px;
+  border-radius: 23px;
+  width: 80px;
 }
-#inicio {
-  display: flex;
-  position: relative;
-  margin-left: 150px;
-  margin-top: -40px;
-}
-#formulario {
-  width: 500px;
+#capa1 {
+  width: 70%;
   height: auto;
+  background: white;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+}
+#capa2 {
+  height: 580px;
+  width: 360px;
+  background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+  text-align: center;
+  padding-right: 40px;
+}
+#capa3 {
+  position: relative;
+  margin-top: 200px;
+}
+#documento,
+#contrasena {
+  width: 30%;
+  margin: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
   background: #dae3f3;
-  border-radius: 4%;
-  margin: 100px;
-  padding: auto;
-  display: inline-block;
 }
-#contrasena,#documento {
-  border-radius: 2%;
-  background: gainsboro;
-  height: 22px;
+#boton {
+  background: -webkit-linear-gradient(top, #dae3f3, #2079b0);
+  border: 2px;
+  border-color: #d5d5d5;
+  color: #000000;
+  text-align: center;
+  height: 30px;
+  width: 80px;
+  border-radius: 16px;
 }
-#formulario > input {
-  margin: 20px;
-}
-@media (min-width: 920px){
+@media (max-width: 900px) {
+  body{
+    width: 100px;
+  }
+  #capa1 {
+    width: 60%;
+    height: auto;
+    background: white;
+    text-align: center;
+    position: static;
+    margin-top: -100px;
+  }
+  #capa2 {
+    height: 370px;
+    width: 270px;
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+  }
+  #capa3 {
+    position: relative;
+    margin-top: 100px;
+  }
   #logo {
     position: relative;
-    display: flex;
-    margin-left: 40px;
-    margin-top: 40px;
-    border-radius: 50px;
+    margin-left: 5px;
+    margin-bottom: -80px;
   }
-  #inicio {
-    display: flex;
+  #img{
     position: relative;
-    margin-left: 150px;
-    margin-top: -40px;
+    margin-top: 100px;
   }
-  #formulario {
-    width: 700px;
-    height: auto;
+  #h1 {
+    position: relative;
+    margin-left: 1px;
+    margin-bottom: -15px;
+    margin: 20px;
+  }
+  #documento,
+  #contrasena {
+    width: 30%;
+    height: 5px;
+    margin: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
     background: #dae3f3;
-    border-radius: 4%;
-    margin: 100px;
-    padding: auto;
-    display: inline-block;
-  }
-  #contrasena,#documento {
-    border-radius: 2%;
-    background: gainsboro;
-    height: 30px;
-    width: 350px;
-  }
-  #formulario > input {
-    margin: 40px;
   }
 }

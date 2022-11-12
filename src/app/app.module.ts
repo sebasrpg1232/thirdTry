@@ -14,6 +14,8 @@ import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-c
 import { MenuComponent } from './menu/menu.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PermisoRegistroComponent } from './permiso-registro/permiso-registro.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -22,19 +24,21 @@ import { HttpClientModule } from '@angular/common/http';
     IndexComponent,
     PerfilComponent,
     RecuperarContrasenaComponent,
-    MenuComponent
+    MenuComponent,
+    PermisoRegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RecaptchaV3Module
+    RecaptchaV3Module,
+    RecaptchaModule
   ],
   providers: [
     {
       provide: RECAPTCHA_V3_SITE_KEY,
-    useValue: environment.recaptcha.siteKey 
+      useValue: environment.recaptcha.siteKey
     }
   ],
   bootstrap: [AppComponent]
